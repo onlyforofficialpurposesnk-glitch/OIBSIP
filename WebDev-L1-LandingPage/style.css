@@ -1,0 +1,282 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #14213d;
+  --yellow: #fca311;
+  --light: #f1f3f6;
+  --grey: #d9dde4;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* keeps headings clear of the sticky nav */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--navy);
+  background-color: var(--light);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; margin-bottom: 12px; }
+h3 { font-size: 1.2rem; margin-bottom: 8px; }
+
+a {
+  color: var(--navy);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--navy);
+  padding: 14px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.brand {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--yellow);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.nav-links a {
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.hero {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 90px 0 100px;
+}
+
+.hero-label {
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  max-width: 540px;
+  font-size: 1.1rem;
+  color: var(--grey);
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--yellow);
+  color: var(--navy);
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: var(--white);
+}
+
+.btn-dark {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+.stats {
+  background-color: var(--yellow);
+  padding: 28px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-intro {
+  margin-bottom: 36px;
+}
+
+.section-dark {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.two-col {
+  display: flex;
+  gap: 40px;
+}
+
+.two-col > div {
+  flex: 1;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-top: 4px solid var(--yellow);
+  padding: 24px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.review {
+  background-color: var(--white);
+  border-left: 4px solid var(--yellow);
+  padding: 20px 24px;
+}
+
+.review footer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.cta-band {
+  background-color: var(--grey);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-band p {
+  margin-bottom: 24px;
+}
+
+
+.site-footer {
+  background-color: var(--navy);
+  color: var(--grey);
+  padding: 48px 0 20px;
+  font-size: 0.95rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-brand {
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.site-footer a {
+  color: var(--yellow);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
+
+  .hero { padding: 60px 0; }
+  .section { padding: 50px 0; }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
